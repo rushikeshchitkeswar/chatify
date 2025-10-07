@@ -23,6 +23,7 @@ app.use(
       "http://localhost:5173", // for development
       "https://coruscating-gumdrop-03f53f.netlify.app", // for production
     ],
+    credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
   })
