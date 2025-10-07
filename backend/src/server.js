@@ -19,7 +19,10 @@ const PORT = process.env.PORT || ENV.PORT || 3000;
 app.use(express.json({ limit: "5mb" })); // req.body
 app.use(
   cors({
-    origin: "*",
+    origin: [
+      "http://localhost:5173", // for development
+      "https://coruscating-gumdrop-03f53f.netlify.app", // for production
+    ],
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
   })
